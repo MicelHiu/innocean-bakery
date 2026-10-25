@@ -24,8 +24,8 @@ const formatDate = (value) => value ? new Date(value).toLocaleString('id-ID', {d
         <div v-else class="overflow-x-auto">
             <table class="w-full border-collapse text-sm">
                 <thead>
-                    <tr class="bg-excel text-left text-white">
-                        <th class="w-12 border border-excel-dark px-3 py-2 text-center">#</th>
+                    <tr class="bg-excel text-center text-white">
+                        <th class="w-12 border border-excel-dark px-3 py-2">#</th>
                         <th class="border border-excel-dark px-3 py-2">Name</th>
                         <th class="border border-excel-dark px-3 py-2">Store</th>
                         <th class="border border-excel-dark px-3 py-2">Product</th>
@@ -42,7 +42,7 @@ const formatDate = (value) => value ? new Date(value).toLocaleString('id-ID', {d
                         <td class="border border-grid px-3 py-2">{{ s.name }}</td>
                         <td class="border border-grid px-3 py-2">{{ s.store }}</td>
                         <td class="border border-grid px-3 py-2">{{ s.product }}</td>
-                        <td class="whitespace-nowrap border border-grid px-3 py-2 text-slate-500">
+                        <td class="whitespace-nowrap border border-grid px-3 py-2 text-slate-500 text-center">
                             {{ formatDate(s.created_at) }}
                         </td>
                     </tr>
