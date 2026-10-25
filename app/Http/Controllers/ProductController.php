@@ -14,11 +14,4 @@ class ProductController extends Controller
             Product::where('tier_id', $store->tier_id)->orderBy('product_name')->get()
         );
     }
-
-    public function all()
-    {
-        return ProductResource::collection(
-            Product::orderBy('product_id')->get()
-        );
-    }
 }
