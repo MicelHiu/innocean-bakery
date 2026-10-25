@@ -4,6 +4,25 @@
 @source '../../storage/framework/views/*.php';
 
 @theme {
-    --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
-        'Segoe UI Symbol', 'Noto Color Emoji';
+    --font-sans: Montserrat, Arial, ui-sans-serif, system-ui, sans-serif;
+    --color-excel: #8c4d2b;
+    --color-excel-dark: #6f3717;
+    --color-excel-light: #f6e3da;
+    --color-grid: #e7ddd8;
+    --color-sheet: #fff7f5;
+}
+
+@layer base {
+    body {
+        color: #211a16;
+    }
+}
+
+@layer components {
+    .field-label {
+        @apply mb-1 block text-xs font-semibold uppercase tracking-wide text-[#85736b];
+    }
+    .field{
+        @apply w-full border border-grid bg-white px-3 py-2 text-sm outline-none focus:border-excel focus:ring-1 focus:ring-excel disabled:bg-sheet disabled:text-slate-400;
+    }
 }
